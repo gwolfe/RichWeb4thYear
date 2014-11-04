@@ -1,0 +1,29 @@
+<html>
+<head>
+    <title>Reflection Matrix</title>
+    <script type="text/javascript">
+        var can, ctx;
+
+        function init() {
+            can = document.getElementById("can");
+            ctx = can.getContext("2d");
+            ctx.fillStyle = "blue";
+            ctx.font = "48pt Helvetica";
+            ctx.fillText("Reflection", 0, 100);
+            ctx.setTransform(1, 0, 0, -1, 0, 0);
+            ctx.fillStyle = "red";
+            ctx.fillText("Reflection", 0, -100);
+            ctx.scale(1, 1.5);
+            var grad = ctx.createLinearGradient(0, -50, 0, -140);
+            grad.addColorStop(0, 'blue');
+            grad.addColorStop(1, 'rgba(255, 255, 255, 0)');
+            ctx.fillStyle = grad;
+            ctx.fillText("Reflection", 0, -102 / 1.5);
+        }
+    </script>
+</head>
+<body onload="init()">
+    <canvas id="can" height="200" width="300">
+    </canvas>
+</body>
+</html>

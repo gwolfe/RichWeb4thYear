@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<title>Rich Web lab 5</title>
+<meta charset="utf-8">
+<meta name="description" content="Rich Web Lab 1">
+<meta name="keywords" content="HTML5, CSS3, JavaScript, jQuery">
+<meta name="author" content="Graham Wolfe">
+</head>
+
+<body>
+
+	<main>
+        <div>
+            <div>
+        Name <input type="text" id="name" value=""><br><br><br>
+
+            </div>
+            <div>
+        Age:<select name="Age" id="age">
+        <option value="">Please select age below</option>
+        <option value="0-18">0-18</option>
+        <option value="18-30">18-30</option>
+        <option value="30-45">30-45</option>
+        <option value="45-60">45-60</option>
+        <option value="60+">60+</option>
+        </select>
+            </div>
+            <div>
+        <br><br>
+        Gender:<input type="radio" name="gender" value="Male" id = "male">Male
+        <input type="radio" name="gender" value="Female" id = "female" >Female
+
+            </div>
+
+        <br><br>
+        Terms & Conditions:
+        <body onload="disableSubmit()">
+        <input type="checkbox" name="terms" id="terms">
+         I Agree The Terms & Coditions
+        <br><br>
+
+        <input type="button" value="submit" id="submit" onclick="validateForm();">
+
+        <footer>
+        </footer>
+
+	</main>
+
+       <script>
+
+            function validateForm(){
+
+            var a = document.getElementById("name").value;
+                if (a == "") {
+                    alert("First name must be filled out");
+                    return false;
+                }
+             var b = document.getElementById("age").value;
+                if (b == "") {
+                    alert("Age must be filled out");
+                    return false;
+                }
+              var c = document.getElementById("male");
+              var d = document.getElementById("female");
+                if (c.checked == false && d.checked == false) {
+                    alert("Gender must be picked");
+                    return false;
+                }
+                var e = document.getElementById("terms");
+                if (e.checked == false) {
+                    alert("Check Box");
+                    return false;
+                }
+
+            }
+       </script>
+
+
+
+</body>
+
+</html>
