@@ -6,10 +6,18 @@
 <title>Defeasible reasoning - Wikipedia, the free encyclopedia</title>
 <link href="wikipedia_css.css" rel="stylesheet" />
 <script src="show.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+
+
+    <script>
+        $(document).ready(function(){
+        $("p:contains(right)").wikipedia_css.css("font-style","italic");
+        });
+    </script>
+
+
 </head>
-
 <body id="body">
-
 	<div id="sidebar">
 		<figure id="logo">
 			<img
@@ -92,13 +100,6 @@
 	<div id="article">
 		<section id="defeasible_resoning_section">
 			<br>
-
-            <div>
-                <button id="button" onclick="showhide()">Hide</button>
-                <button id="button" onclick="showhide()">Emphasise</button>
-                <button id="button" onclick="showhide()">Remove</button>
-            </div>
-
 			<h1 id="firstheading">Defeasible Reasoning</h1>
 			<hr>
 			<p id="subfirstheading">From Wikipedia, the free encyclopedia</p>
@@ -580,5 +581,10 @@
 					alt="Powered by MediaWiki" width="88" height="31"></a></li>
 		</ul>
 	</div>
+
+
+
+
+
 </body>
 </html>

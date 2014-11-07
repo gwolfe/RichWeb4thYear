@@ -9,6 +9,11 @@ html {
 	position: relative;
 }
 
+
+{
+    font-style: italic;
+}
+
 #accounts_nav {
 	list-style-type: none;
 	margin: 0;
